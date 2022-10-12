@@ -1,0 +1,11 @@
+packages:
+  - name: generator
+    actions:
+      - name: uuid
+        limits:
+          timeout: 5000
+          memory: 256
+environment:
+  DATABASE_NAME: ${DATABASE_NAME}
+  DATABASE_COLLECTION: ${DATABASE_COLLECTION}
+  DATABASE_URL: ${DATABASE_URL}
