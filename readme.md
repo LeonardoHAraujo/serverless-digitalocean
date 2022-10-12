@@ -20,7 +20,9 @@ For run `do-func` make following steps:
 - Create your namespace `doctl serverless namespaces create <Name>`
 - Run this command for init serverless `doctl serverless init`
 - Connect with serverless namespace `doctl serverless connect`
-- Run this command in root directory`doctl serverless deploy . --remote-build`
+- In the root, goto `cd packages/generator/uuid` and run `npm install --package-lock-only`
+- Goto root directory again `cd ../../..`
+- Run this command in root directory `doctl serverless deploy . --remote-build`
 - Run this command for get url `doctl sbx fn get generator/uuid --url`
 - Make request POST to url.
 
