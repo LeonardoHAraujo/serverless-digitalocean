@@ -18,7 +18,6 @@ For run `do-func` make following steps:
 - copy `.env.example` to `.env` and put your credentials.
 - Make auth with doctl and your digitalocean [auth](https://docs.digitalocean.com/reference/doctl/reference/auth/).
 - Create your namespace `doctl serverless namespaces create <Name>`
-- Run this command for init serverless `doctl serverless init`
 - Connect with serverless namespace `doctl serverless connect`
 - In the root, goto `cd packages/generator/uuid` and run `npm install --package-lock-only`
 - Goto root directory again `cd ../../..`

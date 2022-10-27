@@ -1,17 +1,19 @@
+'use strict';
+
 const { v4: uuidv4 } = require('uuid')
 const { MongoClient } = require('mongodb')
 
 async function main(args) {
-  const url = process.env['DATABASE_URL']
+  const url = process.env.DATABASE_URL
   const client = new MongoClient(url)
 
-  const dbName = process.env['DATABASE_NAME']
+  const dbName = process.env.DATABASE_NAME
 
   try {
     await client.connect()
 
     const db = client.db(dbName);
-    const collection = db.collection(process.env['DATABASE_COLLECTION'])
+    const collection = db.collection(process.env.DATABASE_COLLECTION)
 
     if (args.__ow_method == 'post') {
       const isInserted = await collection.insertOne({ uuidzzz: uuidv4() }) && true
